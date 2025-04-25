@@ -27,7 +27,7 @@ jobs:
       - name: Install dependencies
         run: pnpm install
       - name: Make Build
-        run: pnpx sst deploy --stage dev
+        run: pnpx sst deploy --stage production
       - name: Copy files to S3 with the AWS CLI
         run: |
           echo "hola"
