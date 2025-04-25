@@ -5,16 +5,14 @@ import { cors } from 'hono/cors'
 import mysql2 from "mysql2"
 
 const app = new Hono()
+app.use('*', cors())
 console.log (process.env.DATABASE_NAME)
 app.get('/', (c) => {
   return c.text('Hello Hono!')
 })
 // Use CORS middleware with no policy
-app.use('*', cors())
 
-app.get('/', (c) => {
-  return c.text('Hello Wong esto esta corriendo de manera exitosa felicidades añadiendo cambios de prueba  !')
-})
+
 console.log(process.env.DEV_DATABASE)
 const sequelize = new Sequelize({
     dialect: 'mysql',
