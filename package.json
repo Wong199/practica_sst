@@ -9,14 +9,16 @@
   },
   "devDependencies": {
     "@types/aws-lambda": "8.10.149",
+    "@types/node": "^22.15.0",
     "esbuild": "^0.21.4",
     "npm-run-all2": "^6.2.0"
   },
   "dependencies": {
-    "hono": "^4.7.7",
     "dotenv": "^16.4.7",
+    "hono": "^4.7.7",
     "mysql2": "^3.13.0",
     "sequelize": "^6.37.6",
     "sst": "3.13.10"
-  }
+  },
+  "packageManager": "pnpm@10.6.2+sha512.47870716bea1572b53df34ad8647b42962bc790ce2bf4562ba0f643237d7302a3d6a8ecef9e4bdfc01d23af1969aa90485d4cebb0b9638fa5ef1daef656f6c1b"
 }
