@@ -2,7 +2,7 @@ import { Hono } from 'hono'
 import { handle } from 'hono/aws-lambda'
 import { Sequelize, DataTypes } from 'sequelize'
 import { cors } from 'hono/cors'
-
+import mysql2 from "mysql2"
 
 const app = new Hono()
 console.log (process.env.DATABASE_NAME)
@@ -18,6 +18,7 @@ app.get('/', (c) => {
 console.log(process.env.DEV_DATABASE)
 const sequelize = new Sequelize({
     dialect: 'mysql',
+    dialectModule:mysql2,
     host: process.env.DEV_HOST,
     username: process.env.DEV_USERNAME,
     password: process.env.DEV_PASSWORD,
